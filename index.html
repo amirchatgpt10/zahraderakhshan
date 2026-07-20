@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="وب‌سایت رسمی زهرا درخشان، وکیل پایه یک دادگستری در بروجن؛ پذیرش دعاوی ملکی، ثبتی، کیفری، خانواده و تعزیرات." />
+  <title>زهرا درخشان | وکیل پایه یک دادگستری</title>
+
+  <style>
+    :root {
+      --sage-900: #29463b;
+      --sage-800: #36584b;
+      --sage-700: #4c6f61;
+      --sage-500: #79998b;
+      --sage-300: #b9cec4;
+      --sage-100: #edf4f0;
+      --cream: #fbfaf6;
+      --white: #ffffff;
+      --text: #24302b;
+      --muted: #68756f;
+      --gold: #b4975a;
+      --shadow: 0 16px 45px rgba(41, 70, 59, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 250, 246, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(76, 111, 97, 0.12);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--sage-900);
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--sage-900);
+      color: white;
+      font-size: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sage-800);
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      transition: 0.25s ease;
+    }
+
+    .nav-cta {
+      background: var(--sage-900);
+      color: white;
+      padding: 11px 18px;
+    }
+
+    .nav-cta:hover,
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--sage-800);
+    }
+
+    .hero {
+      padding: 80px 0 55px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sage-100);
+      color: var(--sage-800);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.25;
+      margin: 0 0 18px;
+      color: var(--sage-900);
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 670px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--sage-900);
+    }
+
+    .btn-secondary {
+      color: var(--sage-900);
+      background: white;
+      border: 1px solid var(--sage-300);
+    }
+
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 14px;
+      color: var(--sage-700);
+      font-weight: 700;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .portrait-main {
+      width: 78%;
+      height: 490px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 38px;
+      margin-right: auto;
+      box-shadow: var(--shadow);
+      border: 8px solid white;
+      background: var(--sage-100);
+    }
+
+    .portrait-small {
+      position: absolute;
+      right: 0;
+      bottom: 8px;
+      width: 42%;
+      height: 235px;
+      object-fit: cover;
+      border-radius: 28px;
+      border: 7px solid white;
+      box-shadow: var(--shadow);
+      background: var(--sage-100);
+    }
+
+    .floating-card {
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(76,111,97,0.12);
+      max-width: 230px;
+    }
+
+    .floating-card strong {
+      display: block;
+      color: var(--sage-900);
+      margin-bottom: 4px;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-head {
+      max-width: 730px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      color: var(--sage-900);
+      margin: 0 0 10px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .services {
+      background: var(--white);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      padding: 24px 20px;
+      border-radius: 22px;
+      background: var(--cream);
+      border: 1px solid rgba(76, 111, 97, 0.12);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--sage-300);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--sage-100);
+      color: var(--sage-900);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--sage-900);
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-photo {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      background: var(--sage-100);
+    }
+
+    .about-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .about-item {
+      background: white;
+      border-radius: 18px;
+      padding: 16px 18px;
+      border-right: 4px solid var(--sage-500);
+      box-shadow: 0 8px 24px rgba(41,70,59,0.07);
+    }
+
+    .advantages {
+      background: var(--sage-900);
+      color: white;
+    }
+
+    .advantages .section-head h2,
+    .advantages .section-head p {
+      color: white;
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .adv {
+      padding: 24px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+    }
+
+    .adv strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .adv p {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+    }
+
+    .offer {
+      padding-top: 0;
+    }
+
+    .offer-box {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+      background: linear-gradient(135deg, var(--sage-100), #f5efe1);
+      border-radius: 30px;
+      padding: 38px;
+      border: 1px solid rgba(180,151,90,0.2);
+    }
+
+    .offer h2 {
+      color: var(--sage-900);
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+    }
+
+    .offer p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .offer-badge {
+      justify-self: end;
+      background: var(--sage-900);
+      color: white;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      line-height: 1.6;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-box {
+      padding: 18px;
+      background: var(--cream);
+      border-radius: 18px;
+      border: 1px solid rgba(76,111,97,0.12);
+    }
+
+    .contact-box strong {
+      color: var(--sage-900);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    form {
+      background: var(--cream);
+      padding: 28px;
+      border-radius: 26px;
+      border: 1px solid rgba(76,111,97,0.12);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--sage-800);
+      margin-bottom: 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--sage-300);
+      background: white;
+      border-radius: 14px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--sage-700);
+      box-shadow: 0 0 0 3px rgba(121,153,139,0.15);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 10px 0 0;
+    }
+
+    footer {
+      background: #1f342c;
+      color: rgba(255,255,255,0.78);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .mobile-call {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .offer-box {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-wrap {
+        min-height: 470px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .adv-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .offer-badge {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .portrait-wrap {
+        min-height: 390px;
+      }
+
+      .portrait-main {
+        height: 365px;
+        width: 86%;
+      }
+
+      .portrait-small {
+        height: 175px;
+        width: 45%;
+      }
+
+      .floating-card {
+        display: none;
+      }
+
+      .cards,
+      .adv-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full {
+        grid-column: auto;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .offer-box {
+        padding: 26px;
+      }
+
+      .offer-badge {
+        width: 150px;
+        height: 150px;
+      }
+
+      .mobile-call {
+        position: fixed;
+        display: flex;
+        left: 18px;
+        right: 18px;
+        bottom: 16px;
+        z-index: 60;
+        background: var(--sage-900);
+        color: white;
+        padding: 14px;
+        border-radius: 999px;
+        justify-content: center;
+        font-weight: 800;
+        box-shadow: var(--shadow);
+      }
+
+      footer {
+        padding-bottom: 88px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark">⚖</span>
+        <span>زهرا درخشان<br><small>وکیل پایه یک دادگستری</small></span>
+      </a>
+
+      <nav aria-label="منوی اصلی">
+        <ul>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#about">درباره من</a></li>
+          <li><a href="#advantages">مزیت‌ها</a></li>
+          <li><a href="#consultation">مشاوره</a></li>
+          <li><a href="#contact">تماس</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav-cta" href="tel:09132851663">تماس مستقیم</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">مشاوره و پیگیری حقوقی با رویکردی دقیق و مسئولانه</div>
+          <h1>زهرا <span>درخشان</span></h1>
+          <p>
+            وکیل پایه یک دادگستری، دانش‌آموخته کارشناسی دانشگاه شهید بهشتی تهران
+            و کارشناس ارشد حقوق جزا و جرم‌شناسی از دانشگاه کاشان.
+            پذیرش و پیگیری پرونده‌های ملکی، ثبتی، کیفری، خانواده و تعزیرات.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#consultation">درخواست مشاوره</a>
+            <a class="btn btn-secondary" href="tel:09132851663">۰۹۱۳۲۸۵۱۶۶۳</a>
+          </div>
+
+          <div class="quick-info">
+            <span>📍 بروجن، خیابان ۱۵ خرداد</span>
+            <span>☎ ۰۳۸۳۴۲۲۱۶۰۸</span>
+            <span>⚖ پذیرش انواع دعاوی</span>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <img class="portrait-main" src="zahra.jpg" alt="تصویر زهرا درخشان" />
+          <img class="portrait-small" src="zahra1.jpg" alt="تصویر دفتر یا پرتره زهرا درخشان" />
+          <div class="floating-card">
+            <strong>پیگیری منظم پرونده</strong>
+            <span>اطلاع‌رسانی شفاف و همراهی حقوقی در مراحل رسیدگی</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>خدمات حقوقی</h2>
+          <p>ارائه مشاوره، تنظیم اسناد و پیگیری پرونده‌ها در حوزه‌های مختلف حقوقی.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🏠</div>
+            <h3>دعاوی ملکی</h3>
+            <p>اختلافات خرید و فروش، خلع ید، تصرف، تخلیه، الزام به تنظیم سند و امور مرتبط با املاک.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📄</div>
+            <h3>دعاوی ثبتی</h3>
+            <p>امور ثبتی، اسناد رسمی، اعتراضات ثبتی و اختلافات مربوط به مالکیت و ثبت املاک.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">⚖</div>
+            <h3>دعاوی کیفری</h3>
+            <p>مشاوره و دفاع در پرونده‌های کیفری با بررسی دقیق مستندات و شرایط پرونده.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">👨‍👩‍👧</div>
+            <h3>دعاوی خانواده</h3>
+            <p>طلاق، مهریه، نفقه، حضانت، تمکین و سایر موضوعات مرتبط با حقوق خانواده.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏛</div>
+            <h3>تعزیرات</h3>
+            <p>رسیدگی به پرونده‌های تعزیراتی و ارائه دفاع تخصصی در مراجع ذی‌صلاح.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <img class="about-photo" src="zahra2.jpg" alt="زهرا درخشان، وکیل پایه یک دادگستری" />
+
+        <div>
+          <div class="section-head">
+            <h2>درباره زهرا درخشان</h2>
+            <p>
+              تمرکز بر تحلیل دقیق موضوع، ارائه راهکار حقوقی قابل‌فهم و پیگیری مسئولانه پرونده.
+            </p>
+          </div>
+
+          <div class="about-list">
+            <div class="about-item">
+              <strong>تحصیلات دانشگاهی</strong><br>
+              کارشناسی از دانشگاه شهید بهشتی تهران
+            </div>
+
+            <div class="about-item">
+              <strong>تحصیلات تخصصی</strong><br>
+              کارشناسی ارشد حقوق جزا و جرم‌شناسی از دانشگاه کاشان
+            </div>
+
+            <div class="about-item">
+              <strong>حوزه‌های فعالیت</strong><br>
+              دعاوی ملکی، ثبتی، کیفری، خانواده و تعزیرات
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <div class="section-head">
+          <h2>مزیت‌های همکاری</h2>
+          <p>ویژگی‌هایی که می‌تواند فرایند دریافت خدمات حقوقی را شفاف‌تر و مطمئن‌تر کند.</p>
+        </div>
+
+        <div class="adv-grid">
+          <div class="adv">
+            <strong>بررسی دقیق پرونده</strong>
+            <p>مطالعه اسناد و توضیح مسیرهای حقوقی پیش از تصمیم‌گیری.</p>
+          </div>
+
+          <div class="adv">
+            <strong>توضیح شفاف</strong>
+            <p>بیان روند پرونده و گزینه‌های پیش‌رو با زبانی روشن و قابل‌فهم.</p>
+          </div>
+
+          <div class="adv">
+            <strong>پیگیری مسئولانه</strong>
+            <p>توجه به مراحل رسیدگی و اطلاع‌رسانی درباره تحولات مهم پرونده.</p>
+          </div>
+
+          <div class="adv">
+            <strong>حفظ محرمانگی</strong>
+            <p>رعایت اصول حرفه‌ای و حفاظت از اطلاعات و اسناد مراجعان.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer" id="consultation">
+      <div class="container">
+        <div class="offer-box">
+          <div>
+            <h2>تخفیف ویژه مراجعان سایت</h2>
+            <p>
+              برای هماهنگی مشاوره اولیه و اطلاع از شرایط تخفیف ویژه، فرم زیر را تکمیل کنید
+              یا با دفتر تماس بگیرید.
+            </p>
+          </div>
+          <div class="offer-badge">تخفیف ویژه<br>برای درخواست‌های ثبت‌شده از سایت</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head">
+            <h2>راه‌های ارتباطی</h2>
+            <p>برای هماهنگی زمان مشاوره، پیش از مراجعه حضوری تماس بگیرید.</p>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-box">
+              <strong>آدرس دفتر</strong>
+              بروجن، خیابان ۱۵ خرداد، پاساژ نورشرق، طبقه اول
+            </div>
+
+            <div class="contact-box">
+              <strong>شماره همراه</strong>
+              <a href="tel:09132851663">۰۹۱۳۲۸۵۱۶۶۳</a>
+            </div>
+
+            <div class="contact-box">
+              <strong>تلفن دفتر</strong>
+              <a href="tel:03834221608">۰۳۸۳۴۲۲۱۶۰۸</a>
+            </div>
+
+            <div class="contact-box">
+              <strong>اینستاگرام</strong>
+              <a href="https://instagram.com/vokalaye.mehre.derakhshan" target="_blank" rel="noopener">
+                @vokalaye.mehre.derakhshan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form id="consultForm">
+          <div class="form-grid">
+            <div>
+              <label for="name">نام و نام خانوادگی</label>
+              <input id="name" name="name" type="text" placeholder="نام شما" required />
+            </div>
+
+            <div>
+              <label for="phone">شماره تماس</label>
+              <input id="phone" name="phone" type="tel" placeholder="مثلاً ۰۹۱۲..." required />
+            </div>
+
+            <div>
+              <label for="subject">موضوع پرونده</label>
+              <select id="subject" name="subject" required>
+                <option value="">انتخاب کنید</option>
+                <option>ملکی</option>
+                <option>ثبتی</option>
+                <option>کیفری</option>
+                <option>خانواده</option>
+                <option>تعزیرات</option>
+                <option>سایر</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="time">زمان مناسب تماس</label>
+              <input id="time" name="time" type="text" placeholder="مثلاً عصرها" />
+            </div>
+
+            <div class="full">
+              <label for="message">توضیح کوتاه</label>
+              <textarea id="message" name="message" placeholder="موضوع را به‌صورت خلاصه بنویسید"></textarea>
+            </div>
+
+            <div class="full">
+              <button class="btn btn-primary" type="submit">ارسال درخواست در واتساپ</button>
+              <p class="form-note">
+                با زدن دکمه، متن درخواست شما در واتساپ آماده می‌شود و فقط کافی است آن را ارسال کنید.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a class="mobile-call" href="tel:09132851663">تماس با دفتر زهرا درخشان</a>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> زهرا درخشان ـ وکیل پایه یک دادگستری
+      <br>
+      مطالب این سایت صرفاً جنبه معرفی و اطلاع‌رسانی عمومی دارد و جایگزین مشاوره حقوقی اختصاصی نیست.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("consultForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const subject = document.getElementById("subject").value;
+      const time = document.getElementById("time").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const text =
+        "سلام، از طریق سایت درخواست مشاوره دارم.%0A" +
+        "نام: " + encodeURIComponent(name) + "%0A" +
+        "شماره تماس: " + encodeURIComponent(phone) + "%0A" +
+        "موضوع: " + encodeURIComponent(subject) + "%0A" +
+        "زمان مناسب تماس: " + encodeURIComponent(time || "تفاوتی ندارد") + "%0A" +
+        "توضیحات: " + encodeURIComponent(message || "بدون توضیح");
+
+      window.open("https://wa.me/989132851663?text=" + text, "_blank");
+    });
+  </script>
+</body>
+</html>
